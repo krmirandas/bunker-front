@@ -1,0 +1,160 @@
+/* GENERAL
+=========================== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  color: rgb(22, 22, 22);
+  background: rgb(252, 252, 252);
+}
+
+h1 {
+  font-size: calc(1.2rem + 1vw);
+}
+
+textarea,
+select {
+  font-family: "Poppins", sans-serif;
+  resize: none;
+}
+
+li,
+button,
+label,
+input,
+p,
+a,
+textarea,
+span,
+select {
+  font-size: calc(0.5rem + 1vw);
+  color: rgb(22, 22, 22);
+}
+
+h2 {
+  font-size: calc(2rem + 1vw);
+  letter-spacing: 0.3rem;
+}
+
+h3 {
+  font-size: calc(1.3rem + 1vw);
+  color: rgb(22, 22, 22);
+  letter-spacing: 0.3rem;
+}
+
+h4,
+h5 {
+  font-size: calc(1rem + 1vw);
+}
+
+a {
+  color: rgb(22, 22, 22);
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+select,
+input {
+  margin: 1.5rem 0rem;
+}
+
+input {
+  border: none;
+  background: rgb(252, 252, 252);
+  border-bottom: 3px solid rgb(240, 214, 211);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+.button {
+  background: rgb(240, 214, 211);
+  border: rgb(240, 214, 211) solid 2px;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10rem;
+  transition: all 0.5s cubic-bezier(0.87, 0.76, 0.33, 0.98);
+  font-family: "Poppins", sans-serif;
+}
+
+.button:hover,
+.back-button .arrow:hover {
+  background: transparent;
+}
+
+.button:focus {
+  outline-style: solid;
+  outline-color: rgb(185, 169, 167);
+  -moz-outline-radius: 10rem;
+}
+
+
+/* RESPONSIVE
+  =========================== */
+
+@media screen and (max-width: 800px) {
+
+  .split-left {
+    background: linear-gradient(rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.33)),
+      url(../../../../assets/img/woman-min.jpg);
+    background-size: cover;
+    background-position: top;
+  }
+
+  .split-right {
+    display: none;
+  }
+
+  .text .desc {
+    background: #f0d6d382;
+    border-radius: 20px;
+    margin: 3rem 0rem;
+  }
+
+  li,
+  button,
+  label,
+  input,
+  p,
+  a,
+  textarea,
+  span {
+    font-size: calc(0.8rem + 1vw);
+  }
+
+  h3 {
+    font-size: calc(1.5rem + 1vw);
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  li,
+  button,
+  label,
+  input,
+  p,
+  textarea,
+  span {
+    font-size: calc(1.1rem + 1vw);
+  }
+
+  h3 {
+    font-size: calc(1.6rem + 1vw);
+  }
+}

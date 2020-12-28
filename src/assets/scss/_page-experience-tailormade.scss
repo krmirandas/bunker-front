@@ -1,0 +1,38 @@
+//
+.tailormade-page,
+.tailormade-detail{
+    img.tailormade-detail-img{
+        margin: 40px 0px 15px 0px;
+    }
+
+    .subsection{
+        margin-bottom: 40px;
+    }
+
+    .tailormade-detail-title{
+        color: $gray-800;
+        font-family: "gotham-htf-medium";
+        font-size: 1.75rem;
+        margin-bottom: 28px;
+        margin-top: 25px;
+        text-align: left;
+    }
+
+    .tailormade-detail-description{
+        color: $gray-600;
+        font-family: "gotham-htf";
+        font-size: 0.8125rem;
+        max-width: 900px;
+        line-height: 1.5rem;
+        text-align: left;
+    }
+
+    .travels-form.experience-tailormade-form{
+        button.experience-tailormade-form-button{
+            margin-top: 35px;
+            padding: 14px 30px;
+            width: 355px;
+        }
+    }
+}
+

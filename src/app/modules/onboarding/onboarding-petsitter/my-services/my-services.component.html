@@ -1,0 +1,263 @@
+<section class="content">
+  <section class="services">
+    <h2>Mis servicios</h2>
+    <div class="services-catalog">
+      <ul class="servicios">
+        <li *ngFor="let service of services; index as i" >
+          <ng-container *ngIf="service.edition_active; else serviceEdition" [formGroup]="servicesForms.controls[i]">
+            <div class="title">
+              <div class="icon {{ service.type }}"></div>
+              <!-- <input
+              type="text"
+              formControlName="type"
+              [attr.value]="servicesForms.controls[i].controls.type.value"
+              > -->
+              <h5>{{ service.type }}</h5>
+              <control-messages
+                [control]="servicesForms.controls[i].controls.type"
+              ></control-messages>
+            </div>
+            <div class="price">
+              <input
+              type="number"
+              formControlName="price"
+              [attr.value]="servicesForms.controls[i].controls.price.value"
+              >
+              <control-messages
+                [control]="servicesForms.controls[i].controls.price"
+              ></control-messages>
+              <button class="button" (click)="service.edition_active = false;">
+                Cancelar
+              </button>
+              <button class="button" (click)="updateService(i)">Guardar</button>
+            </div>
+          </ng-container>
+          <ng-template #serviceEdition>
+            <div class="title">
+              <div class="icon {{ service.type }}"></div>
+              <h5>{{ service.type }}</h5>
+            </div>
+            <div class="price">
+              <p>${{ service.price }}</p>
+              <button class="button" (click)="service.edition_active = true;">Editar</button>
+              <button class="button" (click)="deleteService(service.id)">
+                Eliminar
+              </button>
+            </div>
+          </ng-template>
+          
+        </li>
+      </ul>
+    </div>
+    <h2>Mis paquetes</h2>
+    <div class="package-catalog">
+      <div class="package" *ngFor="let package of packages; index as i">
+        <ng-container *ngIf="package.edition_active; else packageEdition" [formGroup]="packagesForms.controls[i]">
+          <div class="package-container">
+            <!-- INIT CHECKBOXES -->
+            <div class="check-option">
+              <label for="hospedaje-check">Hospedaje</label>
+              <input
+                type="checkbox"
+                (click)="addOrRemoveService('Hospedaje', formPackage, package.options)"
+                name="service-check"
+                id="hospedaje-check"
+                class="form-control type"
+                [checked]="isOptionIncluded(package.options, 'Hospedaje')"
+                value="Hospedaje"
+              />
+            </div>
+            <div class="check-option">
+              <label for="paseo-check">Paseo</label>
+              <input
+                type="checkbox"
+                (click)="addOrRemoveService('Paseo', formPackage, package.options)"
+                name="service-check"
+                id="paseo-check"
+                class="form-control type"
+                [checked]="isOptionIncluded(package.options, 'Paseo')"
+                value="Paseo"
+              />
+            </div>
+            <div class="check-option">
+              <label for="trainning-check">Entrenamiento</label>
+              <input
+                type="checkbox"
+                (click)="addOrRemoveService('Entrenamiento', formPackage, package.options)"
+                name="service-check"
+                id="trainning-check"
+                class="form-control type"
+                [checked]="isOptionIncluded(package.options, 'Entrenamiento')"
+                value="Entrenamiento"
+              />
+            </div>
+            <div class="check-option">
+              <label for="bath-check">Baño</label>
+              <input
+                type="checkbox"
+                (click)="addOrRemoveService('Baño', formPackage, package.options)"
+                name="service-check"
+                id="bath-check"
+                class="form-control type"
+                [checked]="isOptionIncluded(package.options, 'Baño')"
+                value="Baño"
+              />
+            </div>
+            <!-- END CHECKBOXES -->
+            <div class="package-price">
+              <input
+              type="number"
+              formControlName="price"
+              [attr.value]="servicesForms.controls[i].controls.price.value"
+              >
+            </div>
+            <button class="button" (click)="package.edition_active = false;">
+              Cancelar
+            </button>
+            <button class="button" (click)="updatePackage(i)">Guardar</button>
+          </div>
+        </ng-container>
+        <ng-template #packageEdition>
+          <div class="package-container">
+            <p>{{ package.type }}</p>
+            <div class="package-price">
+              <h5>${{ package.price }}</h5>
+            </div>
+            <button class="button" (click)="package.edition_active = true;">Editar</button>
+            <button class="button" (click)="deletePackage(package.id)">
+              Eliminar
+            </button>
+          </div>
+        </ng-template>
+        
+      </div>
+    </div>
+  </section>
+  <section class="add">
+    <h2>Añadir servicio</h2>
+    <div class="service-form">
+      <div class="add-service">
+        <form id="formService" [formGroup]="formService" (ngSubmit)="saveService(formService)">
+          <div class="field">
+            <label for="service">Servicio</label>
+            <select name="service" id="service" formControlName="type">
+              <option value="Hospedaje" class="form-control type"
+                >Hospedaje</option
+              >
+              <option value="Baño" class="form-control type">Baño</option>
+              <option value="Entrenamiento" class="form-control type"
+                >Entrenamiento</option
+              >
+              <option value="Paseo" class="form-control type">Paseo</option>
+            </select>
+            <control-messages
+              [control]="formService.controls.type"
+            ></control-messages>
+          </div>
+          <div class="field">
+            <label for="price">Precio</label>
+            <input
+              type="number"
+              maxlength="9"
+              minlength="1"
+              class="form-control price"
+              formControlName="price"
+            />
+            <control-messages
+              [control]="formService.controls.price"
+            ></control-messages>
+          </div>
+          <div class="button-container">
+            <button
+              type="submit"
+              class="button"
+            >
+              Agregar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <h2 id="add-package">Añadir paquete</h2>
+    <div class="service-form">
+      <div class="add-service">
+        <form
+          id="formPackage"
+          [formGroup]="formPackage"
+          (submit)="savePackage()"
+        >
+          <div class="field">
+            <label for="service-check">Servicios</label>
+            <div class="check-option">
+              <label for="hospedaje-check">Hospedaje</label>
+              <input
+                type="checkbox"
+                (click)="addOrRemoveService('Hospedaje', formPackage)"
+                name="service-check"
+                id="hospedaje-check"
+                class="form-control type"
+                value="Hospedaje"
+              />
+            </div>
+            <div class="check-option">
+              <label for="paseo-check">Paseo</label>
+              <input
+                type="checkbox"
+                (click)="addOrRemoveService('Paseo', formPackage)"
+                name="service-check"
+                id="paseo-check"
+                class="form-control type"
+                value="Paseo"
+              />
+            </div>
+            <div class="check-option">
+              <label for="trainning-check">Entrenamiento</label>
+              <input
+                type="checkbox"
+                (click)="addOrRemoveService('Entrenamiento', formPackage)"
+                name="service-check"
+                id="trainning-check"
+                class="form-control type"
+                value="Entrenamiento"
+              />
+            </div>
+            <div class="check-option">
+              <label for="bath-check">Baño</label>
+              <input
+                type="checkbox"
+                (click)="addOrRemoveService('Baño', formPackage)"
+                name="service-check"
+                id="bath-check"
+                class="form-control type"
+                value="Baño"
+              />
+            </div>
+          </div>
+          <control-messages
+            [control]="formPackage.controls.type"
+          ></control-messages>
+          <div class="field">
+            <label for="price">Precio</label>
+            <input
+              type="number"
+              class="form-control price"
+              id="price"
+              formControlName="price"
+            />
+            <control-messages
+              [control]="formPackage.controls.price"
+            ></control-messages>
+          </div>
+          <div class="button-container">
+            <button
+              type="submit"
+              class="button"
+            >
+              Aceptar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</section>

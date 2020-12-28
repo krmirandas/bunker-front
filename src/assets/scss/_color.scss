@@ -1,0 +1,34 @@
+// Theme colors
+$blue: #1B475E;
+$indigo: #6c21e6;
+$purple: #6643a5;
+$pink: #c4427e;
+$red: #8d4b52;
+$orange: #ac6125;
+$yellow: #caa944;
+$green: #419154;
+$olive: #5E8257;
+$teal: #34c096;
+$cyan: #30a4b6;
+
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e1e1e1 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #949494 !default;
+$gray-700: #495057 !default;
+$gray-800: #3c3c3c !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$primary: $blue;
+$secondary: $gray-600;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-800;

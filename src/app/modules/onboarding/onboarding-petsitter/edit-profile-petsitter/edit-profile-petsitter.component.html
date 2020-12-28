@@ -1,0 +1,65 @@
+<section class="content">
+  <h3>Editar mi perfil</h3>
+  <div class="profile-info">
+    <form action="">
+      <div class="img-container">
+        <img src="../../../../assets/img/los-usuarios.svg" alt="">
+        <h3>{{petsitter_info.name}} {{petsitter_info.last_name}}</h3>
+      </div>
+      <div class="profile-desc">
+        <div class="desc-info">
+          <div class="field">
+            <label for="name">
+              <h5 class="strong-info">Nombre:</h5>
+            </label>
+            <input type="text" name="name" id="name" value="{{petsitter_info.name}}">
+          </div>
+          <div class="field">
+            <label for="last_name">
+              <h5 class="strong-info">Apellido:</h5>
+            </label>
+            <input type="text" name="last_name" id="last_name" value="{{petsitter_info.last_name}}">
+          </div>
+          <div class="field">
+            <label for="email">
+              <h5 class="strong-info">Email:</h5>
+            </label>
+            <input type="email" name="email" id="email" value="{{petsitter_info.email}}">
+          </div>
+          <div class="field">
+            <label for="phone">
+              <h5 class="strong-info">Teléfono:</h5>
+            </label>
+            <input type="tel" name="phone" id="phone" value="{{petsitter_info.phone}}">
+          </div>
+          <div class="field">
+            <label for="gender">
+              <h5 class="strong-info">Género:</h5>
+            </label>
+            <input type="radio" name="gender" id="female" *ngIf="petsitter_info.gender==='female'; else elseBlock"
+              checked>
+            <ng-template #elseBlock>
+              <input type="radio" name="gender" id="female">
+            </ng-template>
+            <label for="female">Mujer</label>
+            <input type="radio" name="gender" id="male" *ngIf="petsitter_info.gender==='male'; else elseBlock" checked>
+            <ng-template #elseBlock>
+              <input type="radio" name="gender" id="male">
+            </ng-template>
+            <label for="male">Hombre</label>
+          </div>
+        </div>
+        <div class="about-me">
+          <label for="desc">
+            <h5 class="strong-info">Acerca de mi:</h5>
+          </label>
+          <textarea name="desc" id="desc" cols="10" rows="5">{{petsitter_info.desc}}</textarea>
+        </div>
+      </div>
+      <div class="button-container">
+        <a routerLink="/dashboard/petsitter/edit"><button class="button">Editar</button></a>
+        <a routerLink="/dashboard/petsitter"><button class="button">Cancelar</button></a>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,68 @@
+<section class="content">
+  <section class="pets">
+    <h2>Editar mi mascotas</h2>
+    <div class="pets-catalog">
+      <div class="profile-info">
+        <form action="">
+          <div class="img-container">
+            <img src="../../../../assets/img/perro.svg" alt="">
+          </div>
+          <div class="profile-desc">
+            <div class="field">
+              <input type="text" name="name" id="name" value="Kaiser">
+              <label for="name">Nombre</label>
+            </div>
+            <div class="characteristics">
+              <div class="card">
+                <div class="input-span">
+                  <input type="number" name="age" id="age" value="1"><span>Año(s)</span>
+                </div>
+                <label for="age">
+                  <p>Edad</p>
+                </label>
+              </div>
+              <div class="card">
+                <div class="gender">
+                  <div class="gender-option">
+                    <input type="radio" name="gender" value="F" id="Female">
+                    <label for="Female">Hembra</label>
+                  </div>
+                  <div class="gender-option">
+                    <input type="radio" name="gender" value="M" id="Male" checked>
+                    <label for="Male">Macho</label>
+                  </div>
+                </div>
+                <label for="gender">
+                  <p>Sexo</p>
+                </label>
+              </div>
+              <div class="card">
+                <input type="text" name="size" id="size" value="Mediano">
+                <label for="size">
+                  <p>Tamaño</p>
+                </label>
+              </div>
+              <div class="card">
+                <div class="input-span">
+                  <input type="number" name="weight" id="weight" value="20"><span>Kg</span>
+                </div>
+                <label for="weight">
+                  <p>Peso</p>
+                </label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="personality">Personalidad</label>
+              <textarea name="personality" id="personality" cols="10"
+                rows="3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsum, id non iure adipisci minus sint optio esse inventore cumque. </textarea>
+            </div>
+          </div>
+          <div class="button-container">
+            <button type="submit" class="button">Aceptar</button>
+            <a routerLink="/dashboard/customer/my-pets"><button class="button">Cancelar</button></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</section>

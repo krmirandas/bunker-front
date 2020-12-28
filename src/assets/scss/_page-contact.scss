@@ -1,0 +1,22 @@
+//Contact page
+.contact-page{
+    max-width: 910px;
+    margin-bottom: 120px;
+
+    .contact-section{
+        .contact-subtitle{
+            font-size: 1.375rem;
+            margin-bottom: 50px;
+        }
+        .separator{
+            border-left: 1px solid $gray-200;
+        }
+
+        .social-icons{
+            img{
+                margin-right: 25px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

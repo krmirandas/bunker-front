@@ -1,0 +1,34 @@
+<section class="content">
+  <h3>Mi perfil</h3>
+  <div class="profile-info">
+    <div class="img-container">
+      <img src="../../../../assets/img/los-usuarios.svg" alt="">
+      <h3>{{customer_info.name}} {{customer_info.last_name}}</h3>
+    </div>
+    <div class="profile-desc">
+      <div class="desc-info">
+        <div class="field">
+          <h5 class="strong-info">Nombre:</h5>
+          <h5 class="info">{{customer_info.name}}</h5>
+        </div>
+        <div class="field">
+          <h5 class="strong-info">Apellido:</h5>
+          <h5 class="info">{{customer_info.last_name}}</h5>
+        </div>
+        <div class="field">
+          <h5 class="strong-info">Email:</h5>
+          <h5 class="info">{{customer_info.email}}</h5>
+        </div>
+        <div class="field">
+          <h5 class="strong-info">Teléfono:</h5>
+          <h5 class="info">{{customer_info.phone}}</h5>
+        </div>
+        <div class="field">
+          <h5 class="strong-info">Género:</h5>
+          <h5 class="info" *ngIf="customer_info.gender==='male'">Hombre</h5>
+          <h5 class="info" *ngIf="customer_info.gender==='female'">Mujer</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

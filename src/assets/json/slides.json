@@ -1,0 +1,27 @@
+[
+  {
+    "img": "http://lorempixel.com/500/600",
+    "title": "Slide 1",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis at corporis rerum quae, in repudiandae aliquid nulla delectus. Inventore amet consequuntur quia nobis nihil non deserunt dolorum velit pariatur quos!"
+  },
+  {
+    "img": "http://lorempixel.com/500/600",
+    "title": "Slide 2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis at corporis rerum quae, in repudiandae aliquid nulla delectus. Inventore amet consequuntur quia nobis nihil non deserunt dolorum velit pariatur quos! 2"
+  },
+  {
+    "img": "http://lorempixel.com/500/600",
+    "title": "Slide 3",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis at corporis rerum quae, in repudiandae aliquid nulla delectus. Inventore amet consequuntur quia nobis nihil non deserunt dolorum velit pariatur quos! 2"
+  },
+  {
+    "img": "http://lorempixel.com/500/600",
+    "title": "Slide 4",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis at corporis rerum quae, in repudiandae aliquid nulla delectus. Inventore amet consequuntur quia nobis nihil non deserunt dolorum velit pariatur quos! 2"
+  },
+  {
+    "img": "http://lorempixel.com/500/600",
+    "title": "Slide 5",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis at corporis rerum quae, in repudiandae aliquid nulla delectus. Inventore amet consequuntur quia nobis nihil non deserunt dolorum velit pariatur quos! 2"
+  }
+]

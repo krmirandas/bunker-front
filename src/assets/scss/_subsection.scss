@@ -1,0 +1,173 @@
+// Index and global subsections
+.subsection{
+    margin: 20px 0px;
+
+    %subsection-title{
+        font-size: 1.88rem;
+        margin: 30px 0 5px 0;
+        position: relative;
+        width: 100%;  
+    }
+
+    .subsection-title{
+        @extend %subsection-title;
+    }
+
+    %subsection-title-centered{
+        @extend %subsection-title;
+        border: none;
+        font-size: 2.5rem;
+        margin: 100px auto 20px auto;
+        max-width: 700px;
+        position: relative;
+        text-align: center;
+    }
+
+    .subsection-title-centered{
+        @extend %subsection-title-centered;   
+    }
+
+    .subsection-title-centered-little{
+        @extend %subsection-title-centered;  
+        font-size: 1.875rem;
+        max-width: 700px;
+    }
+
+    .subsection-title-left{
+        @extend %subsection-title-centered;
+        font-family: gotham-htf-medium;
+        font-size: 1.75rem;
+        margin: 60px auto 15px 0px;
+        text-align: left;
+    }
+
+    %subsection-text-centered{
+        display: block;
+        line-height: 1.75rem;
+        margin: 20px auto;
+        max-width: 700px;
+        text-align: center;
+        width: 80%;
+    }
+
+    .subsection-text-centered{
+        @extend %subsection-text-centered;
+    }
+
+    .subsection-text-left{
+        display: block;
+        font-size: 0.8125rem;
+        line-height: 1.8rem;
+        margin: 0px auto 40px 0px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .subsection-text-centered-little{
+        @extend %subsection-text-centered;
+        font-size: 1rem;
+        max-width: 600px;
+    }
+
+    .subsection-more{
+        text-align: center;
+
+        %subsection-more-button{
+            border: 1px solid $blue;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 70px auto 65px auto;
+            padding: 10px 20px 10px 20px;
+            position: relative;
+            text-align: center;
+            transition: 1s;
+            max-width: 60%;
+
+            a{
+                color: $blue;
+                font-size: 1rem;
+                font-weight: bold;
+                text-decoration: none;        
+            }
+        }
+    
+        .subsection-more-button{
+            @extend %subsection-more-button; 
+
+            &:hover{
+                background-color: $blue;
+                box-shadow: 1px 3px 15px $gray-600;
+                color: $white;
+                transition: 1s;
+                transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+                a{
+                    color: $white;
+                }
+            } 
+             
+        }
+
+        .subsection-more-button-noborder{
+            @extend %subsection-more-button; 
+            border: none;
+            margin: 30px auto 50px auto;
+            width: auto;
+
+            a{
+                display: inline-block;
+            }
+            &::after{
+                background-image: url("../img/flecha.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: "";
+                display: inline-block;
+                height: 15px;
+                left: 6px;
+                position: relative;
+                top: 4px;
+                width: 15px;
+            }  
+            &:hover{
+                display: block;
+                text-decoration: none;
+                transform: translateX(5px);        
+                transition: 1s;
+            } 
+        }
+    }
+}
+
+// All other pages
+.secondary-page {
+
+    margin-bottom: 90px;
+
+    .subsection{
+
+        .subsection-text-centered{
+            font-size: 1.25rem;
+            line-height: 2rem;
+            margin-bottom: 60px;
+            max-width: 650px;
+        }
+
+        .subsection-text-centered-little{
+            line-height: 2rem;
+            margin-bottom: 60px;
+            max-width: 650px;
+        }
+    }
+}
+
+// Media queries
+@media (max-width: 576px) {
+    .subsection{
+        .subsection-more{
+            .subsection-more-button{
+                margin: 50px auto 50px auto;
+                 
+            }
+        }
+    }
+}

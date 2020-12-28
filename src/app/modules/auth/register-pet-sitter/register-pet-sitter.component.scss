@@ -1,0 +1,103 @@
+/* login */
+
+.signin-form {
+    flex: 1 1 30rem;
+    text-align: center;
+}
+
+.image {
+    flex: 1 1 30rem;
+    background: url(../../../../assets/img/photo-of-dalmatian-dog-drinking-on-bowl.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    margin: 0rem 3rem 3rem 2rem;
+    border-radius: 20px;
+}
+
+.hero-form {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0rem;
+    align-items: center;
+}
+
+.hero-form form {
+    padding: 3rem 0rem;
+    width: 90%;
+    margin: auto;
+}
+
+input:focus {
+    outline: #f0d6d3;
+}
+
+.signin-form label {
+    text-align: left;
+}
+
+.hero-form .button {
+    margin: 3rem;
+}
+
+.gender {
+    display: flex;
+}
+
+.gender-option label {
+    padding: 0rem 1rem;
+}
+
+.signin {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+}
+
+#document {
+    border: none;
+}
+
+.button {
+    width: 60%;
+}
+
+control-messages {
+    font-size: calc(0.1rem + 1vw);
+    color: #b94b3f;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .signin-form,
+    .image {
+        border: none;
+    }
+
+    .signin {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+
+    .gender {
+        display: block;
+    }
+
+    control-messages {
+        font-size: calc(0.5rem + 1vw);
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .image {
+        display: none;
+    }
+
+    control-messages {
+        font-size: calc(1rem + 1vw);
+    }
+}

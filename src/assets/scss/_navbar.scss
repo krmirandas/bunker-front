@@ -1,0 +1,40 @@
+.navbar{
+    margin: 22px auto;
+    background: $white;
+    .navbar-nav{
+        border-right: 1px solid $gray-200;
+        margin-right: 20px;
+        .nav-item{
+            a, nav-link{
+                color: $gray-600;
+                font-size: 0.875rem;
+                font-weight: 400;
+                padding: 8px 18px;
+            }
+            
+        }
+    }
+
+    .social-links{
+        margin: 0px;
+        padding: 0px;
+        border-right: 1px solid $gray-200;
+        li{
+            display: inline-block;
+            margin: 0px 5px;
+        }
+    }
+
+    form{
+        button{
+            font-weight: bold;
+            padding: 12px 30px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar{
+        border-bottom: 1px solid $gray-200;
+    }
+}

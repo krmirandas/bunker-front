@@ -1,0 +1,180 @@
+.exploreBaja-carousel{
+
+    margin-bottom: 50px;
+
+    .carousel-item{
+        figure{
+            display: block;
+            width: 100%;
+
+            .slide{
+                border-radius: 0px;
+                width: 100%;
+            }
+        }
+
+        .carousel-caption{
+            display: block;
+        }
+    }
+
+
+}
+
+
+@media (min-width: 992px) {  
+
+    .exploreBaja-carousel{
+        margin-bottom: 110px;
+
+        .carousel-indicators{
+            bottom: 70px;
+            display: flex;
+            justify-content: center;
+            left: 50%;
+            margin-right: 0px;
+            margin-left: 80px;
+            padding-left: 0;
+            position: absolute;
+            right: auto;
+            
+            li{
+                background-color: $white;
+                border: 1px solid $gray-800;
+            }
+            li.active{
+                background-color: $gray-800;
+            }
+        }
+
+        .carousel-control-next {
+            right: 50%;
+        }
+
+
+        .carousel-item{
+
+            figure{
+                position: relative;
+                max-height: 430px;
+                overflow: hidden;
+                width: 50%;
+
+                .image-filter{
+                    background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.4), rgba(0,0,0,0));
+                    height: 100%;
+                    position: absolute;
+                    width: 100%;
+                    z-index: 5000;
+                }
+                .slide{
+                    position: relative;
+                    width: 100%;
+                }
+            }
+
+            .carousel-caption{
+                bottom: auto;
+                left: 80px;
+                max-width: 45%;
+                position: relative;
+                right: auto;
+                top:70px;
+                vertical-align: top;
+
+                h1,h2,h3,h4,h5,h6{
+                    color: $gray-800;
+                    font-family: "gotham-htf";
+                    font-size: 1.5625rem;
+                    text-align: left;
+                }
+
+                h6{
+                    color: $gray-400;
+                    font-family: "crimsom-text";
+                    font-size: 1rem;
+                    font-weight: normal;
+                    margin-bottom: 15px;
+                    text-align: left;
+                }
+
+                p{
+                    color: $gray-600;
+                    font-size: 0.875rem;
+                    margin-top: 20px;
+                    max-height: 100px;
+                    max-width: 90%;
+                    overflow: hidden;
+                }
+
+                .more-button{
+                    display: block;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    margin-top: 25px;
+                    text-align: left;
+                    transition: 1s;  
+                    
+                    &::after{
+                        background-image: url("../img/flecha.png");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        content: "";
+                        display: inline-block;
+                        height: 15px;
+                        left: 6px;
+                        position: relative;
+                        top: 4px;
+                        width: 15px;
+                    }  
+                    &:hover{
+                        display: block;
+                        text-decoration: none;
+                        transform: translateX(5px);        
+                        transition: 1s;
+                    }   
+                     
+                }  
+            }
+        }  
+    }
+}
+
+@media (max-width: 576px) {
+    .exploreBaja-carousel{
+        .carousel-indicators{
+            top: 35%;
+        }
+        .carousel-control-prev,.carousel-control-next{
+            height: 250px;
+            .carousel-control-prev-icon,.carousel-control-next-icon{
+                top: 40%;
+            }
+        }
+        .carousel-item{
+            .carousel-caption{
+                display: block;
+                left: 0px;
+                margin-top: 15px;
+                position: relative;
+                top: 0px;
+            }
+
+            h1,h2,h3,h4,h5,h6{
+                color: $gray-800;
+                font-size: 1.88rem;
+            }
+
+            h6{
+                color: $gray-400;
+                font-size: 1rem;
+            }
+
+            p{
+                color: $gray-600;
+                font-size: 0.875rem;
+            }
+        }
+    }
+}
+

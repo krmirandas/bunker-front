@@ -1,0 +1,158 @@
+<section class="content">
+  <section class="pets">
+    <h2>Mis mascotas</h2>
+    <div class="pets-catalog">
+      <div class="profile-info" *ngFor="let pet of pets; index as i">
+        <ng-container *ngIf="pet.edition_active; else serviceEdition" [formGroup]="petsForm.controls[i]">
+
+          <div class="img-container">
+            <img src="../../../../assets/img/perro.svg" alt="">
+          </div>
+          <div class="profile-desc">
+            <input type="text" formControlName="name" [attr.value]="petsForm.controls[i].controls.name.value">
+            <div class="characteristics">
+              <div class="card">
+                <input type="number" formControlName="age" [attr.value]="petsForm.controls[i].controls.age.value">
+                <p>Edad</p>
+              </div>
+              <div class="card">
+                <input type="text" formControlName="gender" [attr.value]="petsForm.controls[i].controls.gender.value">
+                <p>Sexo</p>
+              </div>
+              <div class="card">
+                <input type="text" formControlName="size" [attr.value]="petsForm.controls[i].controls.size.value">
+                <p>Tamaño</p>
+              </div>
+              <div class="card">
+                <input type="number" formControlName="weight" [attr.value]="petsForm.controls[i].controls.weight.value">
+                <p>Peso</p>
+              </div>
+            </div>
+            <input type="text" formControlName="personality"
+              [attr.value]="petsForm.controls[i].controls.personality.value">
+          </div>
+          <div class="button-container">
+            <button class="button" (click)="pet.edition_active = false;">
+              Cancelar
+            </button>
+            <button class="button" (click)="updatePet(i)">
+              Guardar
+            </button>
+          </div>
+        </ng-container>
+        <ng-template #serviceEdition>
+          <div class="img-container">
+            <img src="../../../../assets/img/perro.svg" alt="">
+          </div>
+          <div class="profile-desc">
+            <h3>{{ pet.name }}</h3>
+            <div class="characteristics">
+              <div class="card">
+                <h5>{{pet.age}}</h5>
+                <p>Edad</p>
+              </div>
+              <div class="card">
+                <h5>{{pet.gender}}</h5>
+                <p>Sexo</p>
+              </div>
+              <div class="card">
+                <h5>{{pet.size}}</h5>
+                <p>Tamaño</p>
+              </div>
+              <div class="card">
+                <h5>{{pet.weight}} kg</h5>
+                <p>Peso</p>
+              </div>
+            </div>
+            <p>{{pet.personality}}
+            </p>
+          </div>
+          <div class="button-container">
+            <button class="button" (click)="pet.edition_active = true;">
+              Editar
+            </button>
+            <button class="button" (click)="deletePet(pet.id)">
+              Eliminar
+            </button>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </section>
+  <section class="add">
+    <h2>Añadir mascota</h2>
+    <div class="pet-form">
+      <div class="profile-info">
+        <form id="formPet" [formGroup]="formPet" (submit)="save()">
+          <div class="img-container">
+            <img src="../../../../assets/img/perro.svg" alt="">
+          </div>
+          <div class="profile-desc">
+            <div class="field">
+              <input type="text" name="name" class="form-control" formControlName="name" id="name">
+              <control-messages [control]="formPet.controls.name"></control-messages>
+              <label for="name">Nombre</label>
+            </div>
+            <div class="characteristics">
+              <div class="card">
+                <input type="number" name="age" class="form-control" formControlName="age" id="age"
+                  placeholder="Año(s)">
+                <label for="age">
+                  <p>Edad</p>
+                </label>
+                <control-messages [control]="formPet.controls.age"></control-messages>
+              </div>
+              <div class="card">
+                <div class="gender">
+
+                  <div class="gender-option">
+                    <input type="radio" name="gender" value="Hembra" class="form-control" formControlName="gender"
+                      id="Female">
+                    <control-messages [control]="formPet.controls.gender"></control-messages>
+                    <label for="Female" title="Hembra">H</label>
+                  </div>
+
+                  <div class="gender-option">
+                    <input type="radio" name="gender" value="Macho" class="form-control" formControlName="gender"
+                      id="Male">
+                    <control-messages [control]="formPet.controls.gender"></control-messages>
+                    <label for="Male" title="Macho">M</label>
+                  </div>
+                </div>
+                <label for="gender">
+                  <p>Sexo</p>
+                </label>
+              </div>
+              <div class="card">
+                <input type="text" name="size" class="form-control" formControlName="size" id="size"
+                  placeholder="Chico">
+                <control-messages [control]="formPet.controls.size"></control-messages>
+                <label for="size">
+                  <p>Tamaño</p>
+                </label>
+              </div>
+              <div class="card">
+                <input type="number" name="weight" class="form-control" formControlName="weight" id="weight"
+                  placeholder="Kg">
+                <control-messages [control]="formPet.controls.weight"></control-messages>
+                <label for="weight">
+                  <p>Peso</p>
+                </label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="personality">Personalidad</label>
+              <textarea name="personality" class="form-control" formControlName="personality" id="personality" cols="10"
+                rows="3"></textarea>
+              <control-messages [control]="formPet.controls.personality"></control-messages>
+            </div>
+          </div>
+          <div class="form-button-container">
+            <button type="submit" class="button">Aceptar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </section>
+</section>

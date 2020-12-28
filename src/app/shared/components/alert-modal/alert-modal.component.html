@@ -1,0 +1,27 @@
+<section class="alert-mask-container">
+  <div class="alert-modal-cont">
+    <div class="txtR">
+      <i (click)="closeModal()" class="far fa-times-circle clrBlue"></i>
+      <h5 class="alert-modal-title clrBlue" [innerHTML]="msg[0]"></h5>
+      <p class="alert-modal-msg" [innerHTML]="msg[1]"></p>
+      <div class="txtC">
+        <button
+          type="button"
+          class="alert-modal-btn bold txtUppercase"
+          (click)="closeModal()"
+          *ngIf="msg[2] !== 'Continuar'"
+        >
+          {{ msg[2] }}
+        </button>
+        <button
+          type="button"
+          class="alert-modal-btn bold txtUppercase"
+          (click)="goTo('/home')"
+          *ngIf="msg[2] === 'Continuar'"
+        >
+          {{ msg[2] }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

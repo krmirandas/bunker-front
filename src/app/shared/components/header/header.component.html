@@ -1,0 +1,46 @@
+<!-- Header -->
+<!-- NAVBAR
+  =============================== -->
+<header>
+  <nav id="nav" class="navbar">
+    <div class="logo-container">
+      <a routerLink="/home">
+        <img class="logo" src="../../../../assets/img/BunkerPetBold.png" alt="Logo Bunkerpet">
+        <h1>BunkerPet</h1>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a routerLink="/vercuidadores" *ngIf="authService.isAuthenticated();">Ver Cuidadores</a>
+      </li>
+      <li>
+        <a routerLink="/login" *ngIf="!authService.isAuthenticated();">Ingresar</a>
+      </li>
+      <li *ngIf="authService.isAuthenticated();">
+        <div class="profile-options">
+          <a class="profile"><img class="profile-picture" src="../../../../assets/img/los-usuarios.svg"
+              alt="Foto de perfil"></a>
+          <div class="dropdown">
+            <img src="../../../../assets/img/down-arrow.svg" alt="Flecha">
+            <div class="dropdown-content">
+              <a routerLink="/dashboard/customer" *ngIf="authService.isCustomer(); else myprofilepetsitter">Mi
+                perfil</a>
+              <ng-template #myprofilepetsitter>
+                <a routerLink="/dashboard/petsitter">Mi
+                  perfil</a>
+              </ng-template>
+              <a routerLink="/dashboard/customer/my-pets" *ngIf="authService.isCustomer(); else myservices">Mis
+                mascotas</a>
+              <ng-template #myservices>
+                <a routerLink="/dashboard/petsitter/my-services">Mis
+                  servicios</a>
+              </ng-template>
+              <a (click)="logOut();" id="salir">Salir</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+<!-- Header end -->

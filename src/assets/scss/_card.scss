@@ -1,0 +1,268 @@
+.base-card{
+
+    border: none;
+    margin-bottom: 25px;
+    position: relative;
+    transition: 1s;
+    
+    .card-figure{
+        margin: 0;
+        position: relative;
+
+        .image-filter{
+            background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.4), rgba(0,0,0,0));
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            z-index: 5000;
+        }
+        .card-img-top{
+            border-radius: 4px 4px 0 0;
+        }
+        .card-figure-caption{
+            bottom: 80px;
+            color: $white;
+            font-size: 0.8rem;
+            margin-left: 40px;
+            position: absolute;
+            z-index: 5000000;
+        }
+        .price{
+            font-size: 2.2rem;
+            font-family: "crimson-text";
+            bottom: 28px;
+
+            .currency{
+                bottom: 28px;
+                font-size: 1.125rem;
+                font-style: italic; 
+            }
+        }    
+    }
+
+    .card-body{
+        border: 1px solid $gray-200;
+        border-radius: 0 0 4px 4px;
+        font-size: 0.8125rem;
+        padding: 30px 40px 40px 40px;
+
+        .card-date{
+            color: $gray-600;
+            display: block;
+            font-family: "gotham-htf";
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin: 0px 10px 10px 0px;
+            text-align: left;
+        }
+
+        .card-address{
+            color: $gray-600;
+            font-family: "gotham-htf-medium";
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .card-text{
+            font-size: 0.8125rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .card-title{
+            font-family: "gotham-htf-medium";
+            font-size: 1.125rem;
+            margin-bottom: 1.25rem;
+
+        }
+        .more-button{
+            display: block;
+            transition: 1s;  
+            font-size: 0.875rem;
+            font-weight: bold;
+            
+            &::after{
+                background-image: url("../img/flecha.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: "";
+                display: inline-block;
+                height: 15px;
+                left: 6px;
+                position: relative;
+                top: 4px;
+                width: 15px;
+            }  
+            &:hover{
+                display: block;
+                text-decoration: none;
+                transform: translateX(5px);        
+                transition: 1s;
+            }   
+             
+        }  
+    }
+
+    &:hover{
+        box-shadow: 1px 3px 15px $gray-600;
+        transition: 2s;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+}
+
+.destination-card,.experience-card{
+    margin-bottom: 15px;
+    .card-figure{
+        .card-img-top{
+            border-radius: 4px;
+        }      
+    }
+    .card-body{
+        border: none;
+        padding: 30px 40px 20px 0px;
+
+        &:hover{
+            box-shadow: none;
+        }
+    }
+    &:hover{
+        box-shadow: none;
+    }
+
+}
+
+.card-link-wrapper{
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.category-card{
+    border: none;
+    padding: 0px;
+
+    .card-body{
+        border: 1px solid $gray-200;
+        border-radius: 5px;
+        padding: 50px 40px 10px 30px;
+
+        .card-title{
+            font-family: "gotham-htf-medium";
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        .card-text{
+            font-size: 0.8125rem;
+            font-weight: normal;
+        }
+
+        &::after{
+            background-image: url("../img/Paquetes/Experiencias/category-card-oval.svg");
+            background-repeat: no-repeat;
+            content: "";
+            height: 27px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 27px;
+        }
+    }
+}
+
+.category-card.active-card{
+    background-color: rgba(94, 130, 87, 1);
+    border: none;
+    box-shadow: 1px 3px 15px $gray-600;
+
+    .card-body{
+        border: none;
+
+        .card-title{
+            color: #fff;
+            font-weight: normal;
+        }
+        .card-text{
+            color: #fff;
+            font-weight: normal;
+        }
+    }
+
+    &::after{
+        background-image: url("../img/Paquetes/Experiencias/category-card-oval-active.svg");
+        background-repeat: no-repeat;
+        content: "";
+        height: 27px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 27px;
+    }
+}
+
+.category-card-main-title{
+    font-family: "crimson-text";
+    font-size: 2rem;
+    margin: 55px 10px 40px 0px;
+    text-align: left;
+}
+
+.category-card-wrapper{
+    margin-bottom: 20px;
+}
+
+.destination-page{
+    .destination-card,.experience-card{
+        margin-bottom: 75px;
+    }
+}
+
+.packages-page{
+    .base-card{
+        margin-bottom: 140px;
+    }
+    
+}
+
+.comunity-page{
+    .base-card{
+        margin-bottom: 80px;
+        .card-body{
+            .card-title{
+                font-family: "crimsom-text";
+            }
+        }
+    }    
+}
+
+.person-card{
+    margin-bottom: 15px;
+
+    .card-figure{
+        .card-img-top{
+            border-radius: 0px;
+        }      
+    }
+    .card-body{
+        border: none;
+        padding: 30px 40px 20px 0px;
+
+        &:hover{
+            box-shadow: none;
+        }
+
+        .person-name{
+            font-family: "crimsom-text";
+            font-size: 1.25rem;
+        }
+
+        .position{
+            font-size: 0.875rem;
+        }
+    }
+    &:hover{
+        box-shadow: none;
+    }
+}
+

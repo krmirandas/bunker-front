@@ -1,0 +1,75 @@
+<section class="hero-form">
+  <div class="image">
+  </div>
+  <div class="signin-form">
+    <h2 class="title">Registrarme</h2>
+    <form [formGroup]="formRegister" class="form-fields" (submit)="register()">
+      <div class="signin">
+        <div class="field">
+          <label for="name">Nombre</label><br>
+          <input type="text" name="name" class="form-control" formControlName="name" id="name" required />
+          <control-messages [control]="formRegister.controls.name"></control-messages>
+        </div>
+        <div class="field">
+          <label for="lastname">Apellidos</label><br>
+          <input type="text" name="lastname" class="form-control" formControlName="last_name" id="lastname" required />
+          <control-messages [control]="formRegister.controls.last_name"></control-messages>
+        </div>
+        <div class="field">
+          <label for="">Sexo</label>
+          <div class="gender">
+            <div class="gender-option">
+              <input type="radio" name="gender" class="form-control" value="female" formControlName="gender" id="female"
+                required />
+              <control-messages [control]="formRegister.controls.gender"></control-messages>
+              <label for="female"> Mujer</label>
+            </div>
+            <div class="gender-option">
+              <input type="radio" name="gender" class="form-control" value="male" formControlName="gender" id="male" />
+              <control-messages [control]="formRegister.controls.gender"></control-messages>
+              <label for="male"> Hombre</label>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label><br>
+          <input type="email" class="form-control" formControlName="email" id="email" />
+          <control-messages [control]="formRegister.controls.email"></control-messages>
+        </div>
+        <div class="field">
+          <label for="city">Ciudad</label><br>
+          <input type="city" class="form-control" formControlName="city" id="city" />
+          <control-messages [control]="formRegister.controls.city"></control-messages>
+        </div>
+        <div class="field">
+          <label for="phone">Teléfono</label><br>
+          <input type="phone" class="form-control" formControlName="phone" id="phone" />
+          <control-messages [control]="formRegister.controls.phone"></control-messages>
+        </div>
+        <div class="field">
+          <label for="password">Contraseña</label><br>
+          <input type="password" class="form-control" formControlName="password" id="password" required />
+          <control-messages [control]="formRegister.controls.password"></control-messages>
+        </div>
+        <div class="field">
+          <label for="password">Confirmar Contraseña</label>
+          <input type="password" class="form-control" formControlName="password_confirmation" id="passwordR" required />
+          <control-messages [control]="formRegister.controls.password_confirmation"></control-messages>
+        </div>
+        <div class="field">
+          <label for="document">Foto</label><br>
+          <input type="file" name="image" id="document" (change)="setImageValue($event)" required>
+          <control-messages [control]="formRegister.controls.image"></control-messages>
+        </div>
+        <div class="field">
+          <label for="document">Documento Oficial</label><br>
+          <input type="file" name="identification" id="document" (change)="setIdentificationValue($event)" required>
+          <control-messages [control]="formRegister.controls.identification"></control-messages>
+        </div>
+      </div>
+      <button type="submit" [disabled]="formRegister.invalid || isLoading" class="button">
+        Registrarse
+      </button>
+    </form>
+  </div>
+</section>

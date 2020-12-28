@@ -1,0 +1,247 @@
+/* Content */
+.content {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 95%;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.services {
+    flex: 2 1 0;
+    padding: 3rem;
+    text-align: center;
+}
+
+.services-catalog {
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+control-messages {
+    font-size: calc(0.1rem + 1vw);
+    color: #b94b3f;
+}
+
+.servicios {
+    padding: 0rem 0.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.servicios .button,
+.package .button,
+.add .button {
+    margin: 0.5rem;
+}
+
+.servicios h5,
+.package h5 {
+    font-weight: normal;
+}
+
+.servicios li {
+    margin: 2rem 0rem;
+}
+
+.Hospedaje,
+.Baño,
+.Paseo,
+.Entrenamiento,
+.paquete,
+.disponibilidad li,
+.preferencias li {
+    padding-left: calc(2rem + 1vw);
+    background-repeat: no-repeat;
+    background-size: calc(1.5rem + 1vw);
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    margin: 0.5rem;
+}
+
+.preferencias li {
+    background-image: url(../../../../../assets/img/huellas-de-garras.png);
+}
+
+.services {
+    .title {
+        display: inline-block;
+        width: 35%;
+        height: 45px;
+        * {
+            display: inline-block;
+        }
+        h5 {
+            vertical-align: middle;
+        }
+        input {
+            vertical-align: middle;
+        }
+        .icon {
+            height: 30px;
+            width: 30px;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+    }
+    .price {
+        display: inline-block;
+        p {
+            display: inline-block;
+            width: 75px;
+        }
+        input {
+            width: 90px;
+            margin-right: 15px;
+        }
+        button {
+            display: inline-block;
+            padding: 1rem 2rem;
+        }
+
+    }
+}
+
+.Hospedaje {
+    background-image: url(../../../../../assets/img/animal.png);
+}
+
+.Baño {
+    background-image: url(../../../../../assets/img/banera.png);
+}
+
+.Paseo {
+    background-image: url(../../../../../assets/img/walk.png);
+}
+
+.Entrenamiento {
+    background-image: url(../../../../../assets/img/entrenamiento-canino.png);
+}
+
+.paquete {
+    background-image: url(../../../../../assets/img/cumpleanos-y-fiesta.png);
+}
+
+.package-catalog {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem auto;
+}
+
+.package-container {
+    padding: 1rem;
+    border-radius: 20px;
+    border: 3px solid #f0d6d3;
+    height: 100%;
+}
+
+
+.button-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Form */
+.add {
+    flex: 1 1 10rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+.service-form {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+input:focus {
+    outline: #f0d6d3;
+}
+
+.add-service {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+//Hide spinner
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    border-bottom: 4px solid #f0d6d3;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+input,
+select {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+select:focus {
+    outline: none;
+}
+
+#add-package {
+    margin-top: 4rem;
+}
+
+.check-option {
+    width: 60%;
+    margin: auto;
+    text-align: left;
+}
+
+.field input[type="checkbox"] {
+    width: auto;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .servicios li {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .servicios .price {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .package-catalog {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.package-catalog {
+    .package-container{
+        .check-option{
+            width: 95%;
+        }
+    }
+    .package-price {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

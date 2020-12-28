@@ -1,0 +1,136 @@
+/* login */
+
+.login-form {
+    flex: 1 1 30rem;
+    text-align: center;
+}
+
+.image {
+    flex: 1 1 30rem;
+    background: url(../../../../assets/img/woman-feeding-white-and-black-dalmatian-puppy-min.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    margin: 0rem 3rem 3rem 2rem;
+    border-radius: 20px;
+}
+
+.hero-form {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 1rem 0rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-form form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 3rem 0rem;
+    width: 60%;
+}
+
+input:focus {
+    outline: #f0d6d3;
+}
+
+.login-form label {
+    text-align: left;
+}
+
+.hero-form .button {
+    margin: 3rem;
+}
+
+#document {
+    border: none;
+}
+
+.field {
+    flex: 1 1 20rem;
+}
+
+.login-options a:hover {
+    color: #5f5e5e;
+
+    span {
+        color: #5f5e5e;
+    }
+}
+
+control-messages {
+    font-size: calc(0.1rem + 1vw);
+    color: #b94b3f;
+}
+
+.login-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+
+    .remember-password,
+    .remember-password span {
+        font-size: calc(0.05rem + 1vw);
+
+        .singin {
+            text-decoration: underline;
+        }
+
+    }
+}
+
+
+
+@media screen and (max-width: 840px) {
+
+    .login-form,
+    .image {
+        border: none;
+    }
+
+    .hero-form form {
+        width: 90%;
+        padding: 3rem;
+    }
+
+    .login-options {
+
+        .remember-password,
+        .remember-password span {
+            font-size: calc(0.4rem + 1vw);
+
+        }
+    }
+
+    control-messages {
+        font-size: calc(0.5rem + 1vw);
+    }
+
+
+}
+
+
+@media screen and (max-width: 520px) {
+    .image {
+        display: none;
+    }
+
+    .login-options {
+
+        .remember-password,
+        .remember-password span {
+            font-size: calc(0.8rem + 1vw);
+
+        }
+    }
+
+    control-messages {
+        font-size: calc(1rem + 1vw);
+    }
+}

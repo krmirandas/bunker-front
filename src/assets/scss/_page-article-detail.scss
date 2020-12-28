@@ -1,0 +1,100 @@
+.article-detail{
+    
+    margin: 0 auto;
+    max-width: 700px;
+
+    .article-date{
+        color: $gray-600;
+        font-family: "gotham-htf";
+        font-size: 1.0625rem;
+        margin: 70px auto 15px auto;
+        text-align: center;
+    }
+    .article-description{
+        position: relative;
+        p{
+            font-size: 0.875rem;
+            line-height: 1.8125rem;
+            margin: 50px 0 50px 0; 
+
+        }
+        img{
+            margin: 5px 0 5px 0; 
+        }
+    }
+    .article-image{
+        border-radius: 4px;
+        position: relative;
+        margin: 20px 0 50px 0; 
+
+    }
+    .article-title{
+        margin: 10px auto 20px auto;
+    }
+    .article-tools{
+        border-top: 1px solid $gray-200;
+        margin-bottom: 130px;
+        padding-top: 35px;
+        position: relative;
+
+        .goback-button{
+            font-size: 0.875rem;
+            font-weight: bold;
+            float: left;
+            height: 35px;
+            padding: 5px 10px;
+            transition: 1s;  
+            
+            &::before{
+                background-image: url("../img/flecha.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: "";
+                display: inline-block;
+                height: 15px;
+                left: -10px;
+                position: relative;
+                top: 2px;
+                transform: rotate(180deg);
+                width: 15px;
+            }  
+            &:hover{
+                display: block;
+                text-decoration: none;
+                transform: translateX(-5px);        
+                transition: 1s;
+            }   
+             
+        }  
+        .share-buttons{
+            float: right;
+            margin: 0px 0px 0px auto;
+
+            .share-label{
+                font-size: 0.875rem;
+                font-weight: bold;
+            }
+            .share-twitter,.share-facebook{
+                border: 1.3px solid $blue;
+                border-radius: 50%;
+                display: inline-block;
+                height: 35px;
+                margin: 0px 5px;
+                padding: 2px;
+                position: relative;
+                text-align: center;
+                top: -2px;
+                transition: 1s;
+                width: 35px;
+                img{
+                  position: relative;  
+                  text-align: center;
+                }
+                &:hover{
+                    border: 1.3px solid rgba(255,255,255,0);
+                    transition: 0.5s;
+                }
+            } 
+        }   
+    }
+}

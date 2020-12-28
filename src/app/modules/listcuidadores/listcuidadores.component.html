@@ -1,0 +1,41 @@
+<section class="cuidadores">
+  <div class="filters" *ngIf="!name == ''">
+    <h2>{{name}}</h2>
+    <div class="global-info">
+      <div class="services-info">
+        <h3>Servicios</h3>
+        <ul *ngFor="let service of services" class="servicios">
+          <li class="{{service.type}}">{{service.type}} ${{service.price}}</li>
+        </ul>
+      </div>
+      <div class="services-info">
+        <h3>Paquetes</h3>
+        <ul *ngFor="let package of packages" class="servicios">
+          <li class="paquete">
+            {{package.type}} ${{package.price}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a href="mailto:{{ email }}?Subject=Contratar%20servicio"><button type=" submit"
+        class="button">Contratar</button></a>
+
+  </div>
+  <div class="hero-cuidadores">
+    <div class="desc-cuidador" *ngFor="let petsitter of petsitters">
+      <a title="Ver perfil" (click)="getUserInfo(petsitter.id)">
+        <div>
+          <div class="profile-rating">
+            <img src={{petsitter.image}} alt="Foto de perfil">
+          </div>
+          <div class="desc-info">
+            <h3>{{petsitter.name}} {{petsitter.last_name}}</h3>
+            <p *nfFor="let service of services">{{service.type}}</p>
+            <h5><img class="location-img" src="../../../assets/img/location.svg" alt="location icon">{{petsitter.city}}
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

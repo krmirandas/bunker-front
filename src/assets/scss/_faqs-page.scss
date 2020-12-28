@@ -1,0 +1,31 @@
+//FAQ's page
+.faqs-page{
+    .questions-group{
+        margin: 15px auto 200px auto;
+
+        .question{
+            border-bottom: 1px solid $gray-200;
+            margin: 10px auto 10px auto;
+            max-width: 900px;
+            padding: 40px 80px;
+            position: relative;
+
+            .question-title{
+                display: inline-block;
+                font-size: 1.25rem;
+                font-family: "gotham-htf";
+                margin-bottom: 12px;
+            }
+
+            .question-answer{
+                margin-top: 20px;
+            }
+
+            .faq-button{
+                margin: 0px;
+                float: right;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

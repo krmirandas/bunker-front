@@ -1,0 +1,39 @@
+// Fonts
+@font-face {
+  font-family: 'crimsom-text';
+  src: url(../fonts/CrimsonText-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'gotham-htf';
+  src: url(../fonts/GothamHTF-Book.ttf);
+}
+
+@font-face {
+  font-family: 'gotham-htf-medium';
+  src: url(../fonts/GothamHTF-Medium.otf);
+}
+
+@font-face {
+  font-family: 'open-sans';
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+// Componets styles
+@import 'color';
+@import '../bootstrap/scss/bootstrap';
+@import 'heading';
+@import 'breadcrumb';
+@import 'carousel';
+@import 'carousel-exploreBaja';
+@import 'navbar';
+@import 'grid';
+@import 'subsection';
+@import 'subsection-services';
+@import 'card';
+@import 'logo';
+@import 'reservation-modal';
+@import 'form';
+@import 'footer';
+@import 'splitter';
+@import 'images';

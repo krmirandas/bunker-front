@@ -1,0 +1,75 @@
+ // Forms
+.travels-form{
+    margin: 0px auto;
+
+    .form-subtitle{
+        color: $gray-800;
+        font-family: crimsom-text;
+        font-size: 1.875rem;
+        margin: 35px 0px 35px 0px;
+    }
+
+    .form-group{
+        margin: 1rem auto;
+        width: 100%;
+
+        label{
+            color: $gray-600;
+            font-family: "gotham-htf-medium";
+            font-size: 0.75rem;
+            margin-bottom: 9px;
+        }
+
+        .labelfor-radio-button{
+            display: inline-block;
+            font-size: 1rem;
+            margin-bottom: 6px;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+        %input-common{
+            border: 1px solid $gray-200;	
+            border-radius: 4px;
+            font-size: 0.75rem; 
+            height: 41px;	
+        }
+
+        input,
+        select{
+            @extend %input-common;		
+        }
+
+        input[type=radio],
+        input[type=checkbox]{
+            display: inline-block;
+            font-size: 0.75rem;
+            height: auto;
+            margin: 0px 20px 0px 0px;
+            vertical-align: middle;
+        }
+
+        textarea{
+            @extend %input-common;	
+            min-height: 125px;
+        }
+    }
+
+    button{
+        font-size: 0.875rem;
+        font-weight: bold;
+        float: right;
+        margin: 15px auto;
+        padding: 12px 30px;
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+    
+    
+

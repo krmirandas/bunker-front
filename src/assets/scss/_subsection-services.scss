@@ -1,0 +1,46 @@
+.subsection{
+    .services{
+        margin-top: 80px;
+        padding: 0px 75px 0px 75px;
+
+        .service{
+            margin-bottom: 20px;
+            padding-right: 25px;
+
+            .service-icon{
+                position: relative;
+            }
+            .service-title{
+                position: relative;
+                font-family: "gotham-htf";
+                font-size: 1.25rem;
+                font-weight: bold;
+            }
+            .service-description{
+                position: relative;
+                font-size: 0.875rem;
+            }
+    
+        }
+    }
+
+}
+
+@media (max-width: 576px) {
+    .subsection{
+        .services{
+            margin-top: 50px;
+            padding: 0px 5px 10px 5px;
+
+            .service-icon{
+                margin-bottom: 5px;
+            }
+            .service-title{
+                margin-bottom: 10px;
+            }
+            .service-description{
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

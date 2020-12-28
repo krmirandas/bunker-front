@@ -1,0 +1,58 @@
+<section class="ver-perfil">
+    <div class="desc-cuidador">
+        <div class="general">
+            <div class="profile-rating">
+                <img src="../../../assets/img/person.jpg" alt="">
+                <p>4.1<img src="../../../assets/img/pata.svg" alt=""></p>
+            </div>
+            <div class="desc-info">
+                <h3>{{information.name}} {{information.last_name}}Alan Fernández</h3>
+                <h5><img class="location-img" src="../../../assets/img/location.svg" alt="location icon">Querétaro</h5>
+                <p>Departamento amplio</p>
+            </div>
+        </div>
+        <div class="map">
+            <p>Mapa</p>
+        </div>
+    </div>
+    <div class="info-container">
+        <div class="service-info">
+            <div class="info-section">
+                <h3 class="tittle">¿Quién soy?</h3>
+                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt molestias fuga
+                    consectetur, ab, molestiae, eius mollitia perferendis et temporibus at reiciendis eveniet quos nulla
+                    numquam
+                    impedit nobis qui! Suscipit?</p>
+            </div>
+            <div class="info-section">
+                <h3>Servicios</h3>
+                <ul *ngFor="let service of services" class="servicios">
+                    <li>{{service.type}}</li>
+                </ul>
+            </div>
+            <div class="info-section">
+                <h3>Preferencias</h3>
+                <ul class="preferencias">
+                    <li>Perro pequeño y mediano</li>
+                    <li>Gato</li>
+                    <li>Mascotas entrenadas</li>
+                    <li>No agresivos</li>
+                </ul>
+            </div>
+            <div class="info-section">
+                <h3>Disponibilidad</h3>
+                <ul class="disponibilidad">
+                    <li>Lunes - Viernes 10:00 - 18:00</li>
+                    <li>Sábado 11:00 - 20:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="contact-info">
+                <h3>Alan Fernández</h3>
+                <h5><img class="location-img" src="../../../assets/img/location.svg" alt="location icon">Querétaro</h5>
+                <button class="button">Contactar</button>
+            </div>
+        </div>
+    </div>
+</section>

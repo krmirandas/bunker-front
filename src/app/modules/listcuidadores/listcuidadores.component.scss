@@ -1,0 +1,285 @@
+/* Ver cuidadores */
+input {
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    border: 2px solid rgb(240, 214, 211);
+}
+
+.cuidadores {
+    width: 90%;
+    margin: auto;
+    padding: 3rem 0rem;
+    min-height: 100vh;
+}
+
+.filters {
+    text-align: center;
+    background: rgb(238, 238, 238);
+    border-radius: 20px;
+    padding: 2rem 0rem;
+    margin: auto auto 2rem auto;
+    /*position: -webkit-sticky;
+    position: sticky;
+    top: 1rem;
+    height: min-content;*/
+    width: 60%;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.service-option {
+    flex-basis: 25%;
+    flex-grow: 0;
+}
+
+input+.checkbox-label {
+    background: #fcfcfc;
+    border-radius: 20px;
+    margin: 0rem 3rem 1rem 3rem;
+    border: 2px solid #f0d6d3;
+    transition: all 0.5s cubic-bezier(0.87, 0.76, 0.33, 0.98);
+    cursor: pointer;
+}
+
+.service-option .checkbox-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-label img {
+    margin: 0.3rem auto 0rem auto;
+    width: calc(1.5rem + 1vw);
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+input[type="checkbox"]:checked+.checkbox-label {
+    background: #eee4e3;
+}
+
+
+.services .input-option {
+    margin: 0rem 3rem 1rem 3rem;
+}
+
+.filter-label {
+    margin-right: 1rem;
+}
+
+.input-option span {
+    font-weight: bold;
+    font-size: calc(0.6rem + 1vw);
+    color: #925b56;
+}
+
+
+.button:hover {
+    background: #fcfcfc;
+}
+
+/* Petsitters list */
+.hero-cuidadores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.desc-cuidador a {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #f0d6d3;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.desc-cuidador img {
+    width: calc(6.5rem + 1vw);
+    height: calc(6.5rem + 1vw);
+    border-radius: 50%;
+}
+
+.desc-info {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: #eeeeee;
+    border-radius: 20px;
+}
+
+.desc-info h3 {
+    font-size: calc(0.8rem + 1vw);
+}
+
+.desc-info h5 {
+    font-size: calc(0.4rem + 1vw);
+    font-weight: normal;
+    color: #737373;
+    height: 100%;
+}
+
+h5 .location-img {
+    width: calc(0.6rem + 1vw);
+    height: calc(0.6rem + 1vw);
+    margin-right: 0.3rem;
+}
+
+.desc-info p {
+    font-size: calc(0.3rem + 1vw);
+}
+
+.profile-rating {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.profile-rating p {
+    padding: 0.2rem;
+    font-size: calc(0.1rem + 1vw);
+}
+
+.profile-rating p img {
+    width: calc(0.6rem + 1vw);
+    height: calc(0.4rem + 1vw);
+}
+
+.Hospedaje,
+.Baño,
+.Paseo,
+.Entrenamiento,
+.paquete,
+.disponibilidad li,
+.preferencias li {
+    padding-left: calc(2rem + 1vw);
+    background-repeat: no-repeat;
+    background-size: calc(1.5rem + 1vw);
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    margin: 0.5rem;
+}
+
+.Hospedaje {
+    background-image: url(../../../assets/img/animal.png);
+}
+
+.Baño {
+    background-image: url(../../../assets/img/banera.png);
+}
+
+.Paseo {
+    background-image: url(../../../assets/img/walk.png);
+}
+
+.Entrenamiento {
+    background-image: url(../../../assets/img/entrenamiento-canino.png);
+}
+
+.paquete {
+    background-image: url(../../../assets/img/cumpleanos-y-fiesta.png);
+}
+
+.global-info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+.services-info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+}
+
+.services-info ul {
+    width: 80%;
+    align-self: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .hero-cuidadores {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .service-option {
+        flex: 0 0 20rem;
+    }
+
+    .desc-info h3 {
+        font-size: calc(1rem + 1vw);
+    }
+
+    .desc-info h5 {
+        font-size: calc(0.6rem + 1vw);
+    }
+
+    .desc-info p {
+        font-size: calc(0.5rem + 1vw);
+    }
+
+    .profile-rating p {
+        font-size: calc(0.4rem + 1vw);
+    }
+
+    .profile-rating p img {
+        width: calc(0.7rem + 1vw);
+        height: calc(0.5rem + 1vw);
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .service-option {
+        flex: 0 0 20rem;
+    }
+
+    .desc-info h3 {
+        font-size: calc(1.6rem + 1vw);
+    }
+
+    .desc-info h5 {
+        font-size: calc(1.1rem + 1vw);
+    }
+
+    .desc-info p {
+        font-size: calc(1rem + 1vw);
+    }
+
+    h5 .location-img {
+        width: calc(1rem + 1vw);
+        height: calc(1rem + 1vw);
+        margin-right: 0.1rem;
+    }
+
+    .profile-rating p {
+        font-size: calc(0.9rem + 1vw);
+    }
+
+    .profile-rating p img {
+        width: calc(1rem + 1vw);
+        height: calc(0.8rem + 1vw);
+    }
+
+    .hero-cuidadores {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services-info {
+        width: 100%;
+    }
+}

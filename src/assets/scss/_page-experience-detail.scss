@@ -1,0 +1,292 @@
+.experience-detail{
+    margin-top: 40px;
+    padding: 0px 60px 0px 60px;
+
+    .experience-detail-img{
+        margin-bottom: 20px;
+    }
+
+    .experience-detail-title{
+        color: $gray-800;
+        font-family: "gotham-htf-medium";
+        font-size: 1.75rem;
+        margin-bottom: 28px;
+        margin-top: 25px;
+        text-align: left;
+    }
+
+    .experience-detail-description{
+        color: $gray-600;
+        font-family: "gotham-htf";
+        font-size: 0.8125rem;
+        line-height: 1.5rem;
+        text-align: left;
+    }
+
+
+    .experience-detail-services{
+        position: relative;
+
+        .experience-detail-service{
+            margin: 5px 40px 5px 10px;
+            padding: 0px;
+
+            img.experience-detail-service-img{
+                display: block;
+                margin: 10px auto;
+                height: 35px;
+            }
+
+            .experience-detail-service-name{
+                display: block;
+                font-family: gotham-htf-medium;
+                font-size: 0.75rem;
+                margin: 5px auto;
+                text-align: center;
+            }
+        }
+    }
+
+    .experience-detail-info{
+        margin-top: 40px;
+
+        .experience-detail-data{
+            margin-bottom: 20px;
+            margin-top: 20px;
+            position: relative;
+
+            .experience-detail-data-title{
+                color: $primary;
+                font-family: gotham-htf-medium;
+                font-size: 0.875rem;
+            }
+
+            .experience-detail-data-text{
+                color: $gray-600;
+                font-family: gotham-htf;
+                font-size: 0.8125rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
+
+    .experience-detail-itinerary{
+        margin-top: 40px;
+
+        .experience-detail-itinerary-title{
+            color: $primary;
+            font-family: gotham-htf-medium;
+            font-size: 0.875rem;
+        }
+
+        .experience-detail-itinerary-description-title{
+            color: $gray-800;
+            font-family: gotham-htf-medium;
+            font-size: 0.875rem;
+            margin-bottom: 30px;
+            margin-top: 40px;
+        }
+
+        .experience-detail-itinerary-description-title.first{
+            margin-top: 5px;
+        }
+
+        .experience-detail-itinerary-description-text{
+            color: $gray-600;
+            font-family: gotham-htf;
+            font-size: 0.8125rem;
+            line-height: 1.5rem;
+        }
+
+        .experience-detail-itinerary-description-images{
+            margin-bottom: 40px;
+            margin-top: 40px;
+
+            experience-detail-itinerary-description-img{
+                position: relative;
+            }
+        }
+    }
+
+    .experience-detail-included{
+        margin: 40px 0px;
+
+        .experience-detail-included-title{
+            color: $primary;
+            font-family: gotham-htf-medium;
+            font-size: 0.875rem;
+        }
+
+        .experience-detail-included-text{
+            padding-left: 30px;
+
+            p{
+                color: $gray-600;
+                font-family: gotham-htf;
+                font-size: 0.8125rem;
+                line-height: 1.5rem;
+
+                &::before{
+                    background-image: url("../img/check.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    content: "";
+                    display: inline-block;
+                    height: 15px;
+                    left: -20px;
+                    position: relative;
+                    top: 5px;
+                    width: 14px;
+                }
+            }
+        }
+    }
+
+    .experience-detail-notincluded{
+        margin: 40px 0px;
+
+        .experience-detail-notincluded-title{
+            color: $primary;
+            font-family: gotham-htf-medium;
+            font-size: 0.875rem;
+        }
+
+        .experience-detail-notincluded-text{
+            padding-left: 30px;
+
+            p{
+                color: $gray-600;
+                font-family: gotham-htf;
+                font-size: 0.8125rem;
+                line-height: 1.5rem;
+
+                &::before{
+                    background-image: url("../img/x.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    content: "";
+                    display: inline-block;
+                    height: 15px;
+                    left: -20px;
+                    position: relative;
+                    top: 5px;
+                    width: 10px;
+                }
+            }
+        }
+    }
+
+    .experience-detail-terms{
+          margin: 40px 0px;
+
+          .experience-detail-terms-title{
+              color: $primary;
+              font-family: gotham-htf-medium;
+              font-size: 0.875rem;
+          }
+
+          .experience-detail-terms-text{
+              p{
+                  color: $gray-600;
+                  font-family: gotham-htf;
+                  font-size: 0.8125rem;
+                  line-height: 1.5rem;
+              }
+          }
+    }
+}
+
+.experience-detail-reservation-container{
+    background-color: $white;
+    border: 1px solid $gray-200;
+    display: block;
+    max-width: 100%;
+    min-width: 265px;
+    padding: 40px 30px 40px 30px;
+
+
+    .experience-detail-reservation-title{
+        color: $gray-800;
+        font-family: "gotham-htf-medium";
+        font-size: 1.125rem;
+        margin-bottom: 8px;
+        margin-top: 15px;
+        text-align: left;
+    }
+
+    .experience-detail-reservation-amount{
+        color: $gray-800;
+        display: inline-block;
+        font-family: "crimsom-text";
+        font-size: 1.875rem;
+        margin-bottom: 7px;
+        margin-top: 7px;
+        text-align: left;
+    }
+
+    .experience-detail-reservation-currency,
+    .experience-detail-reservation-persons{
+        color: $gray-800;
+        display: inline-block;
+        font-family: "crimsom-text";
+        font-size: 1rem;
+        font-style: italic;
+        margin-bottom: 7px;
+        margin-top: 15px;
+        text-align: left;
+    }
+
+    .experience-detail-reservation-duration{
+        color: $gray-600;
+        font-family: "gotham-htf";
+        font-size: 0.8125rem;
+        line-height: 1.5rem;
+        text-align: left;
+    }
+
+    .experience-detail-reservation-form{
+
+        .form-group{
+            width: 100%;
+
+            .experience-detail-reservation-form-select{
+                margin-bottom: 30px;
+            }
+        }
+
+        a.experience-detail-reservation-form-button,
+        button.experience-detail-reservation-form-button{
+            background-color: $olive;
+            border: none;
+            color: $white;
+            float: none;
+            font-size: 0.875rem;
+            margin: 15px auto;
+            font-weight: bold;
+            padding: 12px 30px;
+            width: 100%;
+        }
+    }
+}
+
+
+.experience-detail-reservation-container.custom-sticky{
+    position: fixed;
+    top:30px;
+    z-index: 1000;
+}
+
+.experience-detail-checkout-form{
+    a.experience-detail-checkout-form-button,
+    button.experience-detail-checkout-form-button{
+        background-color: $olive;
+        border: none;
+        color: $white;
+        float: right;
+        font-size: 0.875rem;
+        font-weight: bold;
+        margin: 30px 15px 15px auto;
+        max-width: 190px;
+        padding: 12px 30px;
+    }
+}

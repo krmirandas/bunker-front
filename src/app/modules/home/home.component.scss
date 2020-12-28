@@ -1,0 +1,184 @@
+/* MAIN CONTENT
+  =========================== */
+.main-content {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.split-left {
+    flex: 1 1 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.split-right {
+    flex: 3 1 40rem;
+    background: url(../../../assets/img/woman-min.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.text {
+    width: 90%;
+    text-align: center;
+}
+
+.text .title {
+    width: 100%;
+}
+
+.text .desc {
+    padding: 1rem 0rem 2rem 0rem;
+    color: rgba(22, 22, 22, 0.8);
+    font-weight: 300;
+    line-height: 2;
+    width: 100%;
+    letter-spacing: 0.2rem;
+    font-size: calc(0.6rem + 1vw);
+}
+
+.back-button .arrow:hover {
+    background: transparent;
+}
+
+
+/* INFO SECTION
+    =========================== */
+.info {
+    width: 100vw;
+}
+
+.info-container {
+    position: relative;
+    top: 3vh;
+    width: 100vw;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-dueño {
+    flex: 1 1 30rem;
+    border-right: 3.5px solid rgb(240, 214, 211);
+    text-align: center;
+}
+
+.info-cuidador {
+    flex: 1 1 30rem;
+    border-left: 3.5px solid rgb(240, 214, 211);
+}
+
+.info-container .title {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    padding: 0.7rem;
+    width: 100%;
+    flex-grow: 1;
+    font-weight: normal;
+}
+
+.info-dueño .desc,
+.info-cuidador .desc {
+    padding: 0.7rem;
+    width: 90%;
+    margin: auto;
+}
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicios li {
+    list-style: none;
+    align-items: center;
+    transform: translateX(-50%);
+}
+
+.servicios img {
+    padding: 1rem;
+}
+
+.servicios span {
+    position: absolute;
+    margin-top: 4rem;
+}
+
+#catdog {
+    margin-top: 1rem;
+}
+
+#feed {
+    margin-top: 3.6rem;
+}
+
+.info .button {
+    margin-top: 0.5rem;
+    padding: 1rem 2rem;
+}
+
+.back-button {
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.back-button .button {
+    background: none;
+    border: none;
+}
+
+.back-button .arrow {
+    background: rgb(240, 214, 211);
+    border-radius: 50%;
+    padding: 0.8rem;
+    transition: all 0.5s cubic-bezier(0.87, 0.76, 0.33, 0.98);
+}
+
+@media screen and (max-width: 800px) {
+    .text .desc {
+        font-size: calc(1rem + 1vw);
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    .split-left {
+        background: linear-gradient(rgba(255, 255, 255, 0.9),
+                rgba(255, 255, 255, 0.33)),
+            url(../../../assets/img/woman-min.jpg);
+        background-size: cover;
+        background-position: top;
+        min-height: 100vh;
+    }
+
+    .split-right {
+        display: none;
+    }
+
+    .text .desc {
+        background: #f0d6d382;
+        border-radius: 20px;
+        margin: 3rem 0rem;
+    }
+
+    .info-dueño,
+    .info-cuidador {
+        border: none;
+    }
+
+    .text .desc {
+        font-size: calc(1.2rem + 1vw);
+    }
+
+}
